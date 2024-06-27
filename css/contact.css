@@ -1,0 +1,23 @@
+header{
+    background: #20056c;
+    padding: 20px;
+    height: auto;
+    color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+header a{
+    padding:0px 10px;
+    color: inherit;
+    text-decoration: none;
+}
+header nav{
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    text-align: right;
+    font-weight: bold;
+}

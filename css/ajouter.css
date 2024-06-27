@@ -1,0 +1,26 @@
+footer {
+    background: linear-gradient(to top, #20056c, #20056c);
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #20056c;
+}

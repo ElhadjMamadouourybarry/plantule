@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une Plantule</title>
+    <link rel="stylesheet" href="CSS/ajouter.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin:ital,wght@0,400..700;1,400..700&family=Francois+One&family=Playfair+Display:ital@0;1&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #20056c;
+            padding: 20px;
+            height: auto;
+            color: white;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        a{
+            padding:0px 10px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        nav{
+
+            text-align: center;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            text-align: right;
+            font-weight: bold;      
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, select, input, button {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #20056c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <h1>Ajouter une Plantule de Cannabis</h1>
+
+        <nav>
+            <a href="accueil.html" title="Acceuil" class="Acceuil">Acceuil</a>
+            <a href="inventaire.html" title="Inventaire">Inventaire</a>
+            <a href="contact.html" title="Contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form id="plantuleForm" method="post" action="">
+            <label for="etatSante">État de santé:</label>
+            <select id="etatSante" name="etatSante">
+                <option value="rouge">Rouge</option>
+                <option value="orange">Orange</option>
+                <option value="jaune">Jaune</option>
+                <option value="vert">Vert</option>
+            </select>
+
+            <label for="dateArrivee">Date d'arrivée:</label>
+            <input type="date" id="dateArrivee" name="dateArrivee" required>
+
+            <label for="identification">Identification:</label>
+            <input type="text" id="identification" name="identification" required>
+
+            <label for="provenance">Provenance:</label>
+            <input type="text" id="provenance" name="provenance" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="stade">Stade:</label>
+            <select id="stade" name="stade">
+                <option value="initiation">Initiation</option>
+                <option value="microdissection">Microdissection</option>
+                <option value="magenta">Magenta</option>
+                <option value="doubleMagenta">Double magenta</option>
+                <option value="hydroponie">Hydroponie</option>
+            </select>
+
+            <label for="entreposage">Entreposage:</label>
+            <select id="entreposage" name="entreposage">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option2">Option 3</option>
+                <option value="option2">Option 4</option>
+                <option value="option2">Option 5</option>
+                <!-- Ajoutez d'autres options -->
+            </select>
+
+            <label for="actifInactif">Actif/Inactif:</label>
+            <select id="actifInactif" name="actifInactif">
+                <option value="1">Actif</option>
+                <option value="0">Inactif</option>
+            </select>
+
+            <label for="dateRetrait">Date de retrait:</label>
+            <input type="date" id="dateRetrait" name="dateRetrait">
+
+            <label for="raisonRetrait">Raison de retrait:</label>
+            <select id="raisonRetrait" name="raisonRetrait">
+                <option value="raison1">Raison 1</option>
+                <option value="raison2">Raison 2</option>
+                <!-- Ajoutez d'autres options si nécessaire -->
+            </select>
+
+            <label for="responsable">Responsable décontamination:</label>
+            <select id="responsable" name="responsable">
+                <option value="kadija">Kadija Houssein Youssouf</option>
+                <option value="alexandre">Alexandre Tromas</option>
+            </select>
+
+            <label for="note">Note:</label>
+            <textarea id="note" name="note" rows="4"></textarea>
+
+            <!--Ajout du code QR-->
+            <div class="form-group">
+                <label for="qr-input">Entrez le nom de la plante :</label>
+                <input type="text" class="form-control" id="qr-input">
+            </div>
+              <button id="generate-btn" class="btn btn-primary">Générer le QR code</button>
+              <div id="qr-code" class="mt-4"></div>
+
+            <button type="submit" id="envoyer">Ajouter Plantule</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contactez-nous</h2>
+                <p>Adresse: 270 boulevard du plateau, Gatineau, Quebec</p>
+                <p>Email: mobgestionplantules@lacite.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Gestion des Plantules de Cannabis. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+           <script src="qrcode.min.js"></script>
+           <script src="script.js"></script>
+
+</body>
+
+</html>
